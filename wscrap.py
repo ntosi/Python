@@ -1,8 +1,6 @@
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
-cluney = 'https://twitter.com/FelicindaCluney'
-bracesco = 'https://twitter.com/bracesconews?lang=es'
 cronica = 'https://twitter.com/cronicatv'
 #conecto con la pag y la descargo
 
