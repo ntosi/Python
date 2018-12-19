@@ -13,7 +13,7 @@ print(images)
 
 #cambiar ancho nada mas
 width = 600
-print('Resizing all images be %d pixels wide' % width)
+print('Ajustando imagenes a %d pixels de ancho' % width)
 
 folder = 'resized_img'
 if not os.path.exists(folder):
