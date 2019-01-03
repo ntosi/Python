@@ -1,0 +1,16 @@
+import pandas as pd
+
+xls= pd.ExcelFile('erroresprog.xls') #archivo con nombres y apellidos
+print(xls.sheet_names)
+df = xls.parse('Visitadores_versiones_viejas')
+
+fullname_up=list(df['VISITADOR']) #nombre columna
+lista=[]
+for i in fullname_up:
+    lista.append(i)
+
+with open('maillist.csv','w') as f: #genero archivo csv
+    for i in lista:
+        ape,nom= i.split('   ')  #separo nombre y apellido
+        correo='{[0]}{}@bago.com.ar'.format(nom,ape) #genero direccion de mail en tomando la primer letra del nom y el apellido
+        f.write(correo.lower()+'\n')
